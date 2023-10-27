@@ -23,29 +23,27 @@ public class Comentario {
 	@Column(name="id_comentario", unique=true, nullable=false)
 	private Long idComentario;
 	
-	//@Column(name="comentario")
+	@Column(name="comentario")
 	private String comentario;
 	
-	// @Temporal(TemporalType.DATE) // Indica que se trata de una fecha sin hora
-	// @Column(name="fecha")
+	@Temporal(TemporalType.DATE) // Indica que se trata de una fecha sin hora
+	@Column(name="fecha")
 	private Date fecha;
 	
-	// @Column(name="reacciones")
+	@Column(name="reacciones")
 	private Integer reacciones;
 	
-	// @Id
-	// @ManyToOne
-	// @JoinColumn(name="Productos_idProducto")
-	private Long Productos_idProducto;
+	@ManyToOne
+	@JoinColumn(name="productos_id_producto")
+	private Producto Productos_idProducto;
 	
-	// @Id
-	// @ManyToOne
-	// @JoinColumn(name="Usuario_idUsuario")
-	private Long Usuario_idUsuario;
-	
+	@ManyToOne
+	@JoinColumn(name="usuario_id_usuario")
+	private Usuario Usuario_idUsuario;
+
 	// Constructor
-	public Comentario(Long idComentario, String comentario, Date fecha, Integer reacciones, Long productos_idProducto,
-			Long usuario_idUsuario) {
+	public Comentario(Long idComentario, String comentario, Date fecha, Integer reacciones,
+			Producto productos_idProducto, Usuario usuario_idUsuario) {
 		this.idComentario = idComentario;
 		this.comentario = comentario;
 		this.fecha = fecha;
@@ -54,8 +52,10 @@ public class Comentario {
 		Usuario_idUsuario = usuario_idUsuario;
 	}
 	
-	// ** Constructor vacio
-	public Comentario() {}
+	// Constructor vacio
+	public Comentario() {
+		
+	}
 
 	// Getters y Setters
 	public Long getIdComentario() {
@@ -90,29 +90,31 @@ public class Comentario {
 		this.reacciones = reacciones;
 	}
 
-	public Long getProductos_idProducto() {
+	public Producto getProductos_idProducto() {
 		return Productos_idProducto;
 	}
 
-	public void setProductos_idProducto(Long productos_idProducto) {
+	public void setProductos_idProducto(Producto productos_idProducto) {
 		Productos_idProducto = productos_idProducto;
 	}
 
-	public Long getUsuario_idUsuario() {
+	public Usuario getUsuario_idUsuario() {
 		return Usuario_idUsuario;
 	}
 
-	public void setUsuario_idUsuario(Long usuario_idUsuario) {
+	public void setUsuario_idUsuario(Usuario usuario_idUsuario) {
 		Usuario_idUsuario = usuario_idUsuario;
 	}
 
-	// toString
+	//toString
 	@Override
 	public String toString() {
 		return "Comentario [idComentario=" + idComentario + ", comentario=" + comentario + ", fecha=" + fecha
 				+ ", reacciones=" + reacciones + ", Productos_idProducto=" + Productos_idProducto
 				+ ", Usuario_idUsuario=" + Usuario_idUsuario + "]";
 	}
+	
+	
 	
 	
 	

@@ -7,6 +7,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
@@ -21,28 +23,32 @@ public class Pedido {
 	@Column(name="id_pedido", unique=true, nullable=false)
 	private Long idPedido;
 	
-	// @Temporal(TemporalType.DATE) // Indica que se trata de una fecha sin hora
-	// @Column(name="fecha")
+	@Temporal(TemporalType.DATE) // Indica que se trata de una fecha sin hora
+	@Column(name="fecha")
 	private Date fecha;
 	
-	// @Column(name="detalles")
+	@Column(name="detalles")
 	private String detalles;
 	
-	// @Column(name="formaPago")
+	@Column(name="forma_pago")
 	private String formaPago;
 	
-	// @Column(name="Direcciones_idDireccion")
-	private Long Direcciones_idDireccion;
+	@ManyToOne
+	@JoinColumn(name="direcciones_id_direccion")
+	private Direccion Direcciones_idDireccion;
 	
-	// @Column(name="Carrito_idCarrito")
-	private Long Carrito_idCarrito;
+	@ManyToOne
+	@JoinColumn(name="carrito_id_carrito")
+	private Carrito Carrito_idCarrito;
 	
-	// @Column(name="usuario_idUsuario")
-	private Long usuario_idUsuario;
+	@ManyToOne
+	@JoinColumn(name="usuario_id_usuario")
+	private Usuario usuario_idUsuario;
 
 	// Constructor
-	public Pedido(Long idPedido, Date fecha, String detalles, String formaPago, Long direcciones_idDireccion,
-			Long carrito_idCarrito, Long usuario_idUsuario) {
+	public Pedido(Long idPedido, Date fecha, String detalles, String formaPago, Direccion direcciones_idDireccion,
+			Carrito carrito_idCarrito, Usuario usuario_idUsuario) {
+		super();
 		this.idPedido = idPedido;
 		this.fecha = fecha;
 		this.detalles = detalles;
@@ -53,7 +59,9 @@ public class Pedido {
 	}
 	
 	// Constructor vacio
-	public Pedido(){}
+	public Pedido() {
+		
+	}
 
 	// Getters y Setters
 	public Long getIdPedido() {
@@ -88,31 +96,31 @@ public class Pedido {
 		this.formaPago = formaPago;
 	}
 
-	public Long getDirecciones_idDireccion() {
+	public Direccion getDirecciones_idDireccion() {
 		return Direcciones_idDireccion;
 	}
 
-	public void setDirecciones_idDireccion(Long direcciones_idDireccion) {
+	public void setDirecciones_idDireccion(Direccion direcciones_idDireccion) {
 		Direcciones_idDireccion = direcciones_idDireccion;
 	}
 
-	public Long getCarrito_idCarrito() {
+	public Carrito getCarrito_idCarrito() {
 		return Carrito_idCarrito;
 	}
 
-	public void setCarrito_idCarrito(Long carrito_idCarrito) {
+	public void setCarrito_idCarrito(Carrito carrito_idCarrito) {
 		Carrito_idCarrito = carrito_idCarrito;
 	}
 
-	public Long getUsuario_idUsuario() {
+	public Usuario getUsuario_idUsuario() {
 		return usuario_idUsuario;
 	}
 
-	public void setUsuario_idUsuario(Long usuario_idUsuario) {
+	public void setUsuario_idUsuario(Usuario usuario_idUsuario) {
 		this.usuario_idUsuario = usuario_idUsuario;
 	}
 
-	// toString
+	//toString
 	@Override
 	public String toString() {
 		return "Pedido [idPedido=" + idPedido + ", fecha=" + fecha + ", detalles=" + detalles + ", formaPago="
@@ -122,6 +130,5 @@ public class Pedido {
 	
 	
 	
-	
-	
 }
+	

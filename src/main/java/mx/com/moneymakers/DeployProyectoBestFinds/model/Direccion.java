@@ -19,29 +19,28 @@ public class Direccion {
 	@Column(name="id_direccion", unique=true, nullable=false)
 	private Long idDireccion;
 	
-	// @Column(name="calle")
+	@Column(name="calle")
 	private String calle;
 	
-	// @Column(name="colonia")
+	@Column(name="colonia")
 	private String colonia;
 	
-	// @Column(name="estado")
+	@Column(name="estado")
 	private String estado;
 	
-	// @Column(name="cp")
+	@Column(name="cp")
 	private Integer cp;
 	
-	// @Column(name="ciudad")
+	@Column(name="ciudad")
 	private String ciudad;
 	
-	// @Id
-	// @ManyToOne
-	// @JoinColumn(name="Usuario_idUsuario")
-	private Long Usuario_idUsuario;
-	
+	@ManyToOne
+	@JoinColumn(name="usuario_id_usuario")
+	private Usuario Usuario_idUsuario;
+
 	// Constructor
 	public Direccion(Long idDireccion, String calle, String colonia, String estado, Integer cp, String ciudad,
-			Long usuario_idUsuario) {
+			Usuario usuario_idUsuario) {
 		this.idDireccion = idDireccion;
 		this.calle = calle;
 		this.colonia = colonia;
@@ -51,10 +50,12 @@ public class Direccion {
 		Usuario_idUsuario = usuario_idUsuario;
 	}
 	
-	// **Constructor vacio
-	public Direccion() {}
+	// Constructor vacío
+	public Direccion() {
+		
+	}
 
-	// Getters y Setters
+	// getters y Setters
 	public Long getIdDireccion() {
 		return idDireccion;
 	}
@@ -103,11 +104,11 @@ public class Direccion {
 		this.ciudad = ciudad;
 	}
 
-	public Long getUsuario_idUsuario() {
+	public Usuario getUsuario_idUsuario() {
 		return Usuario_idUsuario;
 	}
 
-	public void setUsuario_idUsuario(Long usuario_idUsuario) {
+	public void setUsuario_idUsuario(Usuario usuario_idUsuario) {
 		Usuario_idUsuario = usuario_idUsuario;
 	}
 
@@ -117,6 +118,7 @@ public class Direccion {
 		return "Direccion [idDireccion=" + idDireccion + ", calle=" + calle + ", colonia=" + colonia + ", estado="
 				+ estado + ", cp=" + cp + ", ciudad=" + ciudad + ", Usuario_idUsuario=" + Usuario_idUsuario + "]";
 	}
+	
 	
 	
 	

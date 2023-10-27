@@ -25,14 +25,14 @@ public class Carrito {
 	@Column(name="total")
 	private Double total;
 	
-	@Column(name="totalDescuento")
+	@Column(name="total_descuento")
 	private Double totalDescuento;
 	
 	@ManyToMany
     @JoinTable(
         name = "carrito_has_productos",
-        joinColumns = @JoinColumn(name = "Carrito_idCarrito"),
-        inverseJoinColumns = @JoinColumn(name = "Productos_idProducto")
+        joinColumns = @JoinColumn(name = "carrito_id_carrito"),
+        inverseJoinColumns = @JoinColumn(name = "productos_id_producto")
     )
     private Set<Producto> productos;
 	

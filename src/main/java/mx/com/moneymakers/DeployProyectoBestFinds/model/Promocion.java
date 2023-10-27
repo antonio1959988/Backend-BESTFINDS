@@ -17,10 +17,10 @@ public class Promocion {
 	@Column (name="id_promocion", unique=true, nullable=false)
 	private Long idPromocion;
 	
-	// @Column (name="codigoPromocion")
+	@Column (name="codigo_promocion")
 	private String codigoPromocion;
 	
-	// @Column (name="porcentaje")
+	@Column (name="porcentaje")
 	private Double porcentaje;
 
 	// Constructor 

@@ -19,7 +19,7 @@ import mx.com.moneymakers.DeployProyectoBestFinds.service.ComentarioService;
 
 @RestController
 @RequestMapping(path = "/comentarios")
-@CrossOrigin(origins = "#", methods = RequestMethod.GET)
+@CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
 public class ComentarioController {
 	
 	private final ComentarioService comentarioService;
@@ -35,7 +35,7 @@ public class ComentarioController {
 	public List<Comentario> getAllComentario(){
 		return comentarioService.getAllComentario();
 	}
-	/*
+
 	// Método POST para crear un comentario
 	@PostMapping
 	public void createComentario(@RequestBody Comentario comentario) {
@@ -59,5 +59,5 @@ public class ComentarioController {
 	public void deleteCarrito(@PathVariable Long id) {
 		comentarioService.deleteComentario(id);
 	}
-	*/
+
 }

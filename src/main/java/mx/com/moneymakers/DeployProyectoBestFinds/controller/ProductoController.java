@@ -19,7 +19,7 @@ import mx.com.moneymakers.DeployProyectoBestFinds.service.ProductoService;
 
 @RestController
 @RequestMapping(path = "/productos")
-@CrossOrigin(origins = "#", methods = RequestMethod.GET)
+@CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
 public class ProductoController {
 	
 	private final ProductoService productoService;
@@ -36,17 +36,36 @@ public class ProductoController {
 		return productoService.getAllProducto();
 	}
 	
+	// Método GET para mostrar un producto por id
+	@GetMapping("/{id}")
+	public Producto getProductoById(@PathVariable Long id) {
+		return productoService.getProductoById(id);
+	}
+	
+	// Método DELETE para eliminar un producto por id
+	@DeleteMapping(path = "{id}")
+	public void deleteProducto(@PathVariable("id") Long id) {
+		productoService.deleteProducto(id);
+	}
+		
+	// Método POST para agregar un producto 
+	@PostMapping
+	public void addProducto(@RequestBody Producto producto) {
+		productoService.addProducto(producto);
+	}
+		
+	// Método PUT para actualizar un producto por id
+	@PutMapping(path = "{id}")
+	public Producto updateProduct(@PathVariable("id") Long id, @RequestBody Producto producto) {
+		producto.setIdProducto(id);
+		return productoService.updateProducto(producto);
+	}	
+	
 	/*
 	// Método POST para crear un producto
 	@PostMapping
 	public void createProducto(@RequestBody Producto producto) {
 		productoService.createProducto(producto);
-	}
-	
-	// Método GET para mostrar un producto por id
-	@GetMapping("/{id}")
-	public Producto getProductoById(@PathVariable Long id) {
-		return productoService.getProductoById(id);
 	}
 	
 	// Método PUT para actualizar un producto por id
@@ -60,5 +79,5 @@ public class ProductoController {
 	public void deleteProducto(@PathVariable Long id) {
 		productoService.deleteProducto(id);
 	}
-	*/
+*/
 }

@@ -19,7 +19,7 @@ import mx.com.moneymakers.DeployProyectoBestFinds.service.DireccionService;
 
 @RestController
 @RequestMapping(path = "/direcciones")
-@CrossOrigin(origins = "#", methods = RequestMethod.GET)
+@CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
 public class DireccionController {
 
 	private final DireccionService direccionService;
@@ -36,7 +36,6 @@ public class DireccionController {
 		return direccionService.getAllDireccion();
 	}
 	
-	/*
 	// Método POST para crear una dirección
 	@PostMapping
 	public void createDireccion(@RequestBody Direccion direccion) {
@@ -60,5 +59,5 @@ public class DireccionController {
 	public void deleteDireccion(@PathVariable Long id) {
 		direccionService.deleteDireccion(id);
 	}
-	*/
+
 }

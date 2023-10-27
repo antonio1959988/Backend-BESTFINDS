@@ -19,7 +19,7 @@ import mx.com.moneymakers.DeployProyectoBestFinds.service.CarritoService;
 
 @RestController
 @RequestMapping(path = "/carrito")
-@CrossOrigin(origins = "#", methods = RequestMethod.GET)
+@CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
 public class CarritoController {
 	
 	private final CarritoService carritoService;
@@ -36,7 +36,6 @@ public class CarritoController {
 		return carritoService.getAllCarritos();
 	}
 	
-	/*
 	// Método POST para crear un carrito
 	@PostMapping
 	public void createCarrito(@RequestBody Carrito carrito) {
@@ -60,5 +59,5 @@ public class CarritoController {
 	public void deleteCarrito(@PathVariable Long id) {
 		carritoService.deleteCarrito(id);
 	}
-	*/
+
 }

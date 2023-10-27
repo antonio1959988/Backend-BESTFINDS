@@ -25,7 +25,6 @@ public class DireccionService {
 		return direccionRepository.findAll();
 	}
 	
-	/*
 	// Crear direccion
 	public Direccion createDireccion(Direccion direccion) {
 		return direccionRepository.save(direccion);
@@ -63,5 +62,4 @@ public class DireccionService {
 		Direccion direccion = direccionRepository.findById(id).orElseThrow(() -> new NoSuchElementException("Direccion con el id " + id + " no encontrada"));
 		direccionRepository.delete(direccion);
 	}
-	*/
 }

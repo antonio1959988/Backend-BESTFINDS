@@ -25,7 +25,6 @@ public class PromocionService {
 		return promocionRepository.findAll();
 	}
 	
-	/*
 	// Crear promoción
 	public Promocion createPromocion(Promocion promocion) {
 		return promocionRepository.save(promocion);
@@ -59,5 +58,5 @@ public class PromocionService {
 		Promocion promocion = promocionRepository.findById(id).orElseThrow(() -> new NoSuchElementException("Promoción con el id " + id + " no encontrada"));
 		promocionRepository.delete(promocion);
 	}
-	*/
+
 }

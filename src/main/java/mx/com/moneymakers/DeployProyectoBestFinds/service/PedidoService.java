@@ -25,7 +25,6 @@ public class PedidoService {
 		return pedidoRepository.findAll();
 	}
 	
-	/*
 	// Crear pedido
 	public Pedido createPedido(Pedido pedido) {
 		return pedidoRepository.save(pedido);
@@ -64,6 +63,5 @@ public class PedidoService {
 		Pedido pedido = pedidoRepository.findById(id).orElseThrow(() -> new NoSuchElementException("Pedido con el id " + id + " no encontrado"));
 		pedidoRepository.delete(pedido);
 	}
-	*/
 	
 }

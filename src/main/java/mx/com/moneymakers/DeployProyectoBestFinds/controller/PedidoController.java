@@ -19,7 +19,7 @@ import mx.com.moneymakers.DeployProyectoBestFinds.service.PedidoService;
 
 @RestController
 @RequestMapping(path = "/pedidos")
-@CrossOrigin(origins = "#", methods = RequestMethod.GET)
+@CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
 public class PedidoController {
 	
 	private final PedidoService pedidoService;
@@ -36,7 +36,6 @@ public class PedidoController {
 		return pedidoService.getAllPedido();
 	}
 	
-	/*
 	// Método POST para crear un pedido
 	@PostMapping
 	public void createPedido(@RequestBody Pedido pedido) {
@@ -60,5 +59,5 @@ public class PedidoController {
 	public void deletePedido(@PathVariable Long id) {
 		pedidoService.deletePedido(id);
 	}
-	*/
+
 }

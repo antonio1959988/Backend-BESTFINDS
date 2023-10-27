@@ -17,16 +17,16 @@ public class Usuario {
 	@Column(name = "id_usuario", unique=true, nullable=false)
 	private Long idUsuario;
 	
-	// @Column(name="nombre")
+	@Column(name="nombre")
 	private String nombre;
 	
-	// @Column(name="usuario")
+	@Column(name="usuario")
 	private String usuario;
 	
-	// @Column(name="correo")
+	@Column(name="correo")
 	private String correo;
 	
-	// @Column(name="contrasenia")
+	@Column(name="contrasenia")
 	private String contrasenia;
 	
 	// Constructor

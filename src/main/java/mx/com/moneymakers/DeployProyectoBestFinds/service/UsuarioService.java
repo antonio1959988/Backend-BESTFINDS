@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import mx.com.moneymakers.DeployProyectoBestFinds.model.Usuario;
 import mx.com.moneymakers.DeployProyectoBestFinds.repository.UsuarioRepository;
 
+
 @Service
 public class UsuarioService {
 	
@@ -29,6 +30,11 @@ public class UsuarioService {
 	public Usuario getUsuarioById(Long id) {
 		return usuarioRepository.findById(id).orElseThrow(() -> new NoSuchElementException("Usuario con el id " + id + " no encontrado"));		
 	}
+	//Crear un metodo Get by email utilizando query personalizada que incluye parametros de consulta
+		public Usuario getUsuarioByCorreo(String correo) {
+			return usuarioRepository.getByCorreo(correo);
+		}
+		//-------------------------------------------------------------//
 	
 	// Borrar usuario por id
 	public void deleteUsuario(Long id) {

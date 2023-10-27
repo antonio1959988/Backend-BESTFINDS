@@ -19,7 +19,7 @@ import mx.com.moneymakers.DeployProyectoBestFinds.service.PromocionService;
 
 @RestController
 @RequestMapping(path = "/promociones")
-@CrossOrigin(origins = "#", methods = RequestMethod.GET)
+@CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
 public class PromocionController {
 
 	private final PromocionService promocionService;
@@ -36,7 +36,6 @@ public class PromocionController {
 		return promocionService.getAllPromocion();
 	}
 	
-	/*
 	// Método POST para crear una promoción
 	@PostMapping
 	public void createPromocion(@RequestBody Promocion promocion) {
@@ -60,5 +59,5 @@ public class PromocionController {
 	public void deletePromocion(@PathVariable Long id) {
 		promocionService.deletePromocion(id);
 	}
-	*/
+	
 }

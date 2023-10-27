@@ -23,7 +23,7 @@ public class CarritoService {
 	public List<Carrito> getAllCarritos(){
 		return carritoRepository.findAll();
 	}
-	/*
+
 	// Crear carrito
 	public Carrito createCarrito(Carrito carrito) {
 		return carritoRepository.save(carrito);
@@ -57,5 +57,4 @@ public class CarritoService {
 		Carrito carrito = carritoRepository.findById(id).orElseThrow(() -> new NoSuchElementException("Carrito con el id " + id + " no encontrado"));
 		carritoRepository.delete(carrito);
 	}
-	*/
 }

@@ -24,7 +24,6 @@ public class ComentarioService {
 		return comentarioRepository.findAll();
 	}
 	
-	/*
 	// Crear comentario
 	public Comentario createComentario(Comentario comentario) {
 		return comentarioRepository.save(comentario);
@@ -62,7 +61,6 @@ public class ComentarioService {
 		comentarioRepository.delete(comentario);
 	}
 	
-	*/
 	
 
 }
