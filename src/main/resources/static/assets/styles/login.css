@@ -1,0 +1,341 @@
+
+/* Diseño base de etiqueta body login*/
+body{
+    text-align: center;
+    font-family: "Roboto", sans-serif;;
+    color: #707070;
+}
+
+/* Titulos Login */
+h1{
+    text-align: center;
+    margin-top: 30px;
+    color: #707070;
+}
+
+/* Parrafos Formulario Login */
+#txtInicio{
+    text-align: center;
+    font-family: "Roboto", sans-serif;;
+    
+    color: #707070;
+}
+#txtRecuperarContraseña{
+    text-align: center;
+    font-family: "Roboto", sans-serif;;
+    
+    color: #707070;
+    text-decoration: underline;
+}
+
+
+/*id div para centrar formulario*/
+#centrado{
+
+    display: flex;
+    justify-content: center;
+    
+}
+
+/* Barras laterales */
+#lateralIzq{
+    text-align: right;
+    position: relative;
+    align-items: center;
+    
+}
+#lateralDer{
+    text-align: left;
+    position: relative;
+}
+#imgLateral{
+    width: 30px;
+    max-height: fit-content;
+    height:auto;
+}
+#seccionForm{
+    margin-bottom: 20px;
+    position: relative;
+   
+    align-items: center;
+    
+}
+
+
+
+/*Boton de check*/
+.form-check {
+  display: flex;
+  align-items: center;
+}
+
+/*Espaciado del boton*/
+.form-check-label {
+  margin-right: 100px; /* Ajusta el espacio entre el texto y el botón de verificación según tus preferencias */
+}
+/*Tamaño color y brode de boton de check*/
+#check-input {
+    box-shadow: 0 0 5px #d71787;
+    transform: scale(2); /* Ajusta el valor según el tamaño deseado */
+    border: none;
+   
+  }
+/*color del check al ser precionado*/
+.form-check-input:checked {
+    background-color: #D71787; /* Cambia el color de fondo cuando está marcado  */
+  }
+
+/*color y tamaño de botones*/
+#colorB {
+    background-color: #D71787;
+    font-family: "Roboto", sans-serif;;
+     border-radius: 40px;
+     border: none;
+}
+#btnSesion{
+    background-color: #D71787;
+    font-family: "Roboto", sans-serif;;
+     border-radius: 40px;
+     border: none;
+     
+}
+#btnSesion:hover {
+    background-color: #ff8c66;
+    width: auto;
+    /* Cambia el color de fondo al pasar el mouse por encima */
+}
+
+#colorB:hover {
+    background-color: #ff8c66;
+    width: auto;
+    /* Cambia el color de fondo al pasar el mouse por encima */
+}
+#colorB2:hover {
+    background-color: #ff8c66;
+    
+    /* Cambia el color de fondo al pasar el mouse por encima */
+}
+#colorB2 {
+    background-color: #D71787;
+    font-family: "Roboto", sans-serif;;
+     border-radius: 40px;
+     margin-left: 30px;
+     border: none;
+     
+}
+/*Tamaño del formulario*/
+#tamañoFormulario {
+    transform: scale(.8); /* Ajusta el valor según el tamaño deseado */
+
+}
+
+
+/*Color de las letras en labels*/
+#colorDatos{ 
+    color: #707070; /* Cambia el color del texto a #707070 */
+    font-family: "Roboto", sans-serif; /* Cambia la fuente del texto a "Roboto" */
+  }
+  
+
+/*Color de los labels al ser presionados*/
+#datos {
+    width: 80%;
+
+    &:focus {
+        /*Cuando se da click en los inputs, se crea un resplandor*/
+        color: #707070;
+        font-weight: bold;
+        border: none;
+        box-shadow: 0 0 5px #d71787;
+        outline: 0px;
+    }
+}
+
+
+/*Color input */
+.form-control{
+    color: #707070; /* Cambia el color del texto a #707070 */
+    font-family: "Roboto", sans-serif; /* Cambia la fuente del texto a "Roboto" */
+    display: inline;
+    width: 80%;
+    border: 1px solid #707070
+    
+}
+
+#ocultar{
+    display: none;
+    
+    justify-content: center;
+    
+}
+/*Alertas*/
+.alert{
+    max-width: 80%;
+    display: none;
+}
+
+/*Alertas activadas*/
+.alert-activa{
+    
+    display: block;
+}
+/*Alertas activadas*/
+.alert-noactiva{
+    
+    display: none;
+}
+
+
+.notification {
+    margin-top: 50px;
+    font-weight: bold;
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: rgb(43, 152, 21);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+    animation-name: shake;
+    animation-duration: 0.5s;
+  }
+  .notification2 {
+    margin-top: 50px;
+    font-weight: bold;
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: rgb(152, 21, 21);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+    animation-name: shake;
+    animation-duration: 0.5s;
+  }
+
+
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(-15px);
+    }
+    40% {
+      transform: translateX(15px);
+    }
+    60% {
+      transform: translateX(-15px);
+    }
+    80% {
+      transform: translateX(15px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+
+
+
+
+
+/*////////////////////////////// Media query para centrar titulos y ocultar carrito dentro de la barra/////////////////////////////*/
+@media (max-width: 992px){
+    h1{
+        text-align: center;
+    }
+
+    #imgIcono3{
+        display: none;;
+    }
+
+}
+
+
+/* Media query para ocultar icono de carrito en vista lg */
+@media (min-width: 992px){
+    #imgIcono2{
+        display: none;
+    }
+}
+
+/* Media query para ocultar iconos centrales del footer en vista md */
+@media (min-width: 768px){
+    #iconoFooter{
+        display: none;
+    }
+
+}
+
+/* Media query para ocultar columnas laterales para tamaño sm*/
+@media (max-width: 768px){
+    #col-2{
+        display: none;
+    }
+
+}
+
+
+/* Modificacion de modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-contenido {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+
+    /* Agregar animación de aparición con popup */
+    animation: popup 0.3s ease-in-out;
+}
+
+.cerrar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* Definir la animación "popup" */
+@keyframes popup {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+/*Media query para ocultar barras laterales*/
+@media (max-width: 768px){
+    #imgLateral{
+        display: none;
+    }
+}
+

@@ -1,0 +1,49 @@
+
+
+/* Titulos */
+h1{
+    text-align: center;
+    margin-top: 30px;
+}
+h6{
+    font-style: italic;
+    font-weight: bold;
+    font-size: 2rem;
+}
+.barraPromocion{
+    background-color: #f13c91;
+    color: white;
+    height: 40px;
+    align-items: center;
+    position: sticky;
+    top: 68px;
+    z-index: 100;
+}
+
+h2{
+    text-align: center;
+    color: #D71787  ;
+}
+#fila {
+    border-bottom: 1px solid #707070;
+}
+.card{
+    text-align: justify;
+    border: none;
+}
+.container{
+    max-width: 100%;
+    width: 90%;
+}
+#general{
+    border: 3px solid #D71787;
+    border-radius: 15px;
+}
+
+.divDeImgNoti{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+

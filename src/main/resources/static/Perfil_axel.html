@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Finds</title>
+    <link rel="icon" href="./assets/icons/logoMini.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Estilos css de la pagina-->
+    <link rel="stylesheet" href="./assets/styles/navbarYFooterStyle.css">
+    <link rel="stylesheet" href="./assets/styles/perfil_usuario.css">
+
+    
+
+</head>
+<body>
+    <!-- Barra de navegacion -->
+    <div id="nav-bar" class="sticky-top"></div>
+
+    <br>
+    <!-- foto de perfil-->
+    <img src="./assets/img/Fotos perfil/foto perfil best 3.jpeg" alt="Logo Best Finds" id="imgPerfil" class="hidden" >
+
+    <br>
+
+    <!-- contenedor con el nommbre de usuario e icono-->
+    <div class="container">
+        <div class="row">
+             <div id="icons" >
+                <img id="icono" src="./assets/icons/icons_perfil/usuario.png" alt="Ícono">
+            </div>
+            <div >
+                <h1 id="menuPerfil">Nombre usuario</h1>
+            </div>     
+        </div>
+    </div>    
+<br>
+   
+    
+    <br>
+    <!-- Barra divisora -->
+    <img src="./assets/img/barraBFv1.jpeg" alt="BarraSuperior" class="img-fluid" id="barraDivisora">
+    <br>
+    <br>
+
+
+       <!-- contenedor con los menus del perfil-->
+       <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-6"> <!--Para dar responsividad en diferentes dispositivos -->
+                <div class="icon-container"> <!--Se utilizo icons para dar estilos y lograr que ambos contenedores se mantuvieran en su posicion-->
+                    <img id="icono" src="./assets/icons/icons_perfil/tarjeta-de-identificacion.png" alt="Ícono">
+                </div>
+                <div class="text-center">
+                    <h1 class="menu-perfil" data-toggle="infoContainer1">Datos personales</h1> <!--Se utilizo el id= menuPerfil para mantener el contenedor rosa encima del amarillo y tambien mantenerlo en la misma posicion-->
+                    <div class="info-container hidden" id="infoContainer1">
+                        <!-- Contenido desplegable -->
+                        <p id="datosPersonales">Nombre:  Andre Perez ortiz<br>
+                        Telefono: 3526625351 <br>
+                        Correo:andre@gmail.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-6">
+                <div class="icon-container">
+                    <img id="icono" src="./assets/icons/icons_perfil/excelencia.png" alt="Ícono">
+                </div>
+                <div class="text-center">
+                    <h1 class="menu-perfil" data-toggle="infoContainer2">Direcciones</h1>
+                    <div class="info-container hidden" id="infoContainer2">
+                        <!-- Contenido desplegable -->
+                        <p>Aún no tienes direcciones registradas
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-md-6 col-lg-6">
+                <div class="icon-container">
+                    <img id="icono" src="./assets/icons/icons_perfil/calendario.png" alt="Ícono">
+                </div>
+                <div class="text-center">
+                    <h1 class="menu-perfil" data-toggle="infoContainer3">Historial</h1>
+                    <div class="info-container hidden" id="infoContainer3">
+                        <!-- Información para el tercer contenedor -->
+                        <p>Tus compras pasadas</p>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-6">
+                <div class="icon-container">
+                    <img id="icono" src="./assets/icons/icons_perfil/configuraciones.png" alt="Ícono">
+                </div>
+                <div class="text-center">
+                    <h1 class="menu-perfil" data-toggle="infoContainer4">Configuraciones</h1>
+                    <div class="info-container hidden" id="infoContainer4">
+                        <!-- Información para el cuarto contenedor -->
+                        <p>Necesitas cumplir un mínimo de 30 dias con tu cuenta para habilitar esta función :)... </p>
+                        <!-- Agrega más información aquí -->
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-12 col-md-6 col-lg-6">
+                <div id="icons" class="icon-container">
+                    <img id="icono" src="" alt="Ícono">
+                </div>
+                <div class="text-center">
+                    <h1 id="menuPerfil" class="menu-perfil">algo mas </h1>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-6">
+                <div id="icons" class="icon-container">
+                    <img id="icono" src="" alt="Ícono">
+                </div>
+                <div class="text-center">
+                    <h1 id="menuPerfil" class="menu-perfil">algo mas </h1>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    
+
+
+    <br>
+    <br>
+
+    <!-- Barra divisora -->
+    <img src="./assets/img/barraBFv2.jpeg" alt="BarraSuperior" class="img-fluid" id="barraDivisora">   
+    
+    <br>
+    <br>
+
+    <!-- Pie de pagina -->
+    <div id="footer"> </div>
+
+    <!--Script de bootstrap en la pagina-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <!-- Scripts JS de la pagina -->
+    <script src="./assets/js/perfil.js"></script>
+
+    <!-- Scripts JS de la pagina -->
+    <script src="./assets/js/navbarYFooter.js"></script>
+</body>
+
+</html>

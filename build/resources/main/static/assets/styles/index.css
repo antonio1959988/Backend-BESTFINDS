@@ -1,0 +1,163 @@
+/*lo que agregue yo Ankaret*/
+/*color botones*/
+#colorB {
+    background-color: #D71787;
+    font-family: "Roboto", sans-serif;
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 30px;
+    border: none;
+}
+#colorB:hover {
+    background-color: #ff8c66; /* Cambia el color de fondo al pasar el mouse por encima */
+} 
+#colorL {
+    background-color: #D71787;
+    font-family: "Roboto", sans-serif;
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 30px;
+    border: none;
+}
+#logos {
+    height: 100px;
+    width: 200px;
+    padding: 30px;
+}
+
+/* Estilo de sombra para el carrusel */
+#BannerIndex {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+#textoIcono {
+    color: #2F2F2F;
+    font-family: "Roboto", sans-serif;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+#imgNot{
+    width:100px ;
+}
+.contenedorInferior:hover{
+    box-shadow: 0px 3px 3px 0px rgba(255, 41, 155, 0.75);
+    transform: scale(1.1); /* nivel de zoom deseado */
+    transition: transform 0.3s ease-in-out; /* Duración y efecto de la transición */
+    width: 87%;
+}
+.barraPromocion{
+    background-color: #D71787;
+    color: white;
+    align-items: center;
+}
+
+/*Cierro lo que agregue yo Ankaret*/
+
+/* Diseño base de etiqueta body*/
+body {
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    ;
+    color: #707070;
+}
+
+/* Titulos */
+h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+
+.nombreProducto {
+    font-size: 15px;
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    height: 40px;
+}
+
+.precio {
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.enlaceProducto{
+    text-decoration: none;
+    color: #707070;
+}
+
+
+
+
+
+/* Imagen productos */
+
+
+.imgProducto {
+    margin-bottom: 10px;
+    max-height: 180px;
+}
+
+
+
+.contenedorInferior {
+    border: 2px solid #d1d1d1;
+    padding: 20px;
+    margin: 12px;
+    border-radius: 15px;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.16);
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#btnCar {
+    background-color: #D71787;
+    border-radius: 100px;
+    width: 40px;
+    height: 40px;
+    margin-top: 50px;
+}
+.btnAplicar:hover {
+    background-color: #ff8c66; /* Cambia el color de fondo al pasar el mouse por encima */
+} 
+#btnNot {
+   display: none;
+  
+}
+#colorL:hover {
+    background-color: #ff8c66; /* Cambia el color de fondo al pasar el mouse por encima */
+} 
+
+
+/* Estilo base del botón */
+.contenedorInferior button {
+    margin-top: 14px;
+    background-color: #D71787;
+    border: none;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Anular los estilos de Bootstrap para :active */
+.contenedorInferior button:active, 
+.contenedorInferior button.active {
+    background-color: #D71787; /* Cambia el color de fondo a rojo cuando se presiona el botón */
+}
+
+/* Cambio de color al pasar el mouse por encima */
+.contenedorInferior button:hover {
+    background-color: #ff8c66;
+}
+
+
+.cantidadProducto {
+    text-align: center;
+}

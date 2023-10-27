@@ -1,0 +1,179 @@
+/* Diseño base de etiqueta body*/
+body {
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    ;
+    color: #707070;
+}
+
+/* Titulos */
+h1 {
+    margin: 60px;
+}
+
+/*//////////////////////////////////////////////////////*/
+#carrito {
+    width: 100%;
+}
+
+#imgProductos {
+    width: 10rem;
+    height: 10rem;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.imgProductos2 {
+    width: 10rem;
+    height: 10rem;
+}
+
+@media (max-width: 576px) {
+    #imgProductos {
+        width: 8rem;
+        height: 8rem;
+
+
+    }
+}
+
+
+
+/* Estilos titulos de encabezado*/
+.encabezado {
+    font-size: large;
+}
+
+.rowPosition {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.btn-number {
+    width: 2.4rem;
+    border: solid 2px #D71787;
+}
+
+.icon-trash {
+    color: #D71787;
+}
+
+.input-number {
+    border: solid 2px #D71787;
+    text-align: center;
+    width: 2.8rem !important;
+}
+
+#imgHeader {
+    width: 100%;
+    height: 350px;
+}
+
+/*Estilo boton cotinuar compra */
+/* Estilos botones modal- notas del pedido*/
+.colorButtonRosa {
+    background-color: #D71787;
+    border-color: #D71787;
+    color: #fff;
+    border: none;
+}
+
+
+.colorButtonRosa:hover {
+
+    /*Cuando se da click en los inputs, se crea un resplandor*/
+    border: none;
+    outline: 0px;
+    background-color: #ff8c66;
+    color: #fff;
+}
+
+
+/* Estilo para costo unitario del pedido*/
+.costo-color {
+    font-size: 20px;
+    color: #D71787;
+}
+
+
+/* Estilos para NotaPedido*/
+
+#notaPedido {
+    font-size: 15px;
+    color: #F13C91;
+}
+
+#notaPedido:hover {
+    color: #D71787;
+    text-shadow: 2px 2px 35px #F13C91;
+}
+
+#subrayadoNota {
+    color: #D71787;
+
+}
+
+/*Estilo bolsas de entregas */
+
+.bolsaEntrega {
+    width: 100px;
+    height: 100px;
+    padding: 2px;
+}
+
+.selectorBolsa {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.selectorBolsa+img {
+    cursor: pointer;
+}
+
+.selectorBolsa:checked+img {
+    outline: 2px solid #D71787;
+}
+
+
+/* Estilo para boton que proporciona info de las bolsas*/
+#buttonInfo {
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    padding: 0px;
+}
+
+
+
+/* Estilo costo total*/
+#costoTotal {
+    font-size: x-large;
+    color: #D71787;
+
+}
+
+/* Estilo de barra de promociones */
+.barraPromocion {
+    background-color: #D71787;
+    color: white;
+    align-items: center;
+}
+
+/*Estilos botones carrusel carrito */
+.btnCarrito {
+    position: relative;
+    background-color: #D71787;
+    border-radius: 100px;
+    width: 40px;
+    height: 40px;
+    margin-top: 50px;
+}
+
+.btn-number:hover{
+    background-color: #D71787;
+    color: white;
+}

@@ -1,0 +1,281 @@
+/* Títulos */
+h4{
+    margin-top: 20px;
+}
+
+#izq, h2{
+    text-align: left;
+}
+
+/* Descripción del producto */
+#txtDescripcion{
+    font-size: 14px;
+    text-align: left;
+}
+
+/* Precio del producto */
+#precioPrincipal{
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/*Alineación de filas verticalmente*/
+#verticalAlign{
+    display: grid;
+    place-items: center;
+}
+
+/* Contenedor de la sección superior */
+#contenedor{
+    border: 2px solid #d1d1d1;
+    margin: 2px;
+    padding: 10px;
+}
+
+#contenedor a{
+    text-decoration: none;
+    color: #707070;
+}
+
+/* Implementación de bordes acordes a los contenedores */
+#contenedorInferior, #contenedorAgregarComentario{
+    border: 2px solid #d1d1d1;
+    padding: 20px;
+    margin-top: 12px;
+    width: 100%;
+}
+
+/* Contenedor de sección sugerencias aplicado a cada div de producto */
+#contenedorInferiorConProductos{
+    border: 2px solid #d1d1d1;
+    padding: 20px;
+    margin-top: 12px;
+    width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+}
+
+/* Color de enlaces sin formato */
+#enlaceProducto{
+    color: #707070;
+    text-decoration: none;
+}
+
+/* Formato de contador de productos */
+#cantidadPrincipal{
+    display: block;
+    font-size: 18px;
+    text-align: left;
+}
+
+/* Contenedor de botones selectores */
+#colorSelector{
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+}
+
+/*Formato de selectores de color */
+#tono1{
+    margin: 5px;
+    background-color: #fae1c2;
+    border:#ededed 2px solid;
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+}
+
+#tono2{
+    margin: 5px;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+}
+
+#tono3{
+    margin: 5px;
+    background-color:  #dcb18e;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+}
+
+#tono4{
+    margin: 5px;
+    background-color: #ac794c;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+}
+
+/* Formato de aumento de tamaño, animación */
+#tono1:hover{
+    transform: scale(1.2); /* nivel de zoom deseado */
+    transition: transform 0.3s ease-in-out; /* Duración y efecto de la transición */
+}
+
+#tono2:hover{
+    transform: scale(1.2); /* nivel de zoom deseado */
+    transition: transform 0.3s ease-in-out; /* Duración y efecto de la transición */
+}
+
+#tono3:hover{
+    transform: scale(1.2); /* nivel de zoom deseado */
+    transition: transform 0.3s ease-in-out; /* Duración y efecto de la transición */
+}
+
+#tono4:hover{
+    transform: scale(1.2); /* nivel de zoom deseado */
+    transition: transform 0.3s ease-in-out; /* Duración y efecto de la transición */
+}
+
+/* Imagen principal del producto */
+.imgProductoSeleccionada{
+    max-width: 300px;
+    max-height: 300px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Aumento de tamaño de la imagen del producto principal */
+.imgProductoSeleccionada:hover {
+    transform: scale(1.2); /* nivel de zoom deseado */
+    transition: transform 0.3s ease-in-out; /* Duración y efecto de la transición */
+}
+
+/* Contador de productos superior */
+.cantidadProductoPrincipal{
+    display: block;
+    width: 100px;
+    text-align: center;
+}
+
+/* Botón de la sección principal es más grande */
+#btnComprarPrincipal{
+    background-color: #D71787;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+    margin: 7px;
+    border-radius: 10px;
+}
+
+#btnComprarPrincipal:hover{
+    background-color: #ff8c66; /* Cambia el color de fondo al pasar el mouse por encima */
+}
+
+/* /////////SECCIÓN INFERIOR DERECHA (SUGERENCIAS)/////////////////// */
+
+/* Botón de la sección inferior es más pequeño */
+#btnAplicar, #btnEnviarComentario{
+    margin-top: 14px;
+    background-color: #D71787;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Evento de cambio de color */
+#btnAplicar:hover, #btnEnviarComentario:hover{
+    background-color: #ff8c66; /* Cambia el color de fondo al pasar el mouse por encima */
+}
+
+/* Evento de cambio de contorno en productos */
+#contenedorInferiorConProductos:hover {
+    box-shadow: 0px 3px 3px 0px rgba(255, 41, 155, 0.75);
+}
+
+/* Imagen del producto de sugerencias */
+#imgProducto{
+    margin-bottom: 10px;
+    max-height: 180px;
+}
+
+/* Formato de nombre de los productos en sugerencias */
+.nombreProducto{
+    font-size: 18px;
+    display: block;
+    height: 50px;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+/* Formato de precio de los productos en sugerencias */
+#precio{
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/* Formato de cantidad de los productos en sugerencias */
+#cantidadProducto{
+    text-align: center;
+}
+
+
+/* ///////////////SECCIÓN INFERIOR IZQUIERDA (DESCRIPCIÓN Y COMENTARIOS) //////////// */
+
+/* Estilos de la sección inferior con la descripción del producto y comentarios*/
+#seccionDescYComentarios{
+    text-align: left;
+}
+
+/* Comentario escrito */
+#comentario{
+    text-align: left;
+}
+
+/* Contenedor de descripción producto */
+#acercaDeProducto{
+    margin-top: 20px;
+}
+
+/* Alineación derecha para contador de likes */
+#der{
+    text-align: right;
+}
+
+/* Contenedor de comentarios */
+#contenedorComentarios{
+    border: 2px solid #d1d1d1;
+    padding: 20px;
+    margin-top: 12px;
+    width: 100%;
+    max-height: 650px;
+    text-align: center;
+}
+
+ /* Estilos para el botón de corazón */
+ .boton-corazon {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #707070;
+    transition: color 0.3s;
+}
+
+/* Estilos para el botón de corazón cuando está activo (seleccionado) */
+.boton-corazon.activo {
+    color: #D71787;
+}
+
+
+
+
+
+
+
+
+
+
+

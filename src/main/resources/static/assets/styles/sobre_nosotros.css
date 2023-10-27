@@ -1,0 +1,105 @@
+
+
+/* Diseño base de etiqueta body*/
+body{
+    text-align: left;
+    font-family: "Roboto", sans-serif;;
+    color: #707070;
+}
+
+/* Titulos */
+h1{
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Parrafo principal */
+#txtInicio{
+    font-size: 14px;
+    text-align: left;
+}
+
+/*Alineacion de filas verticalmente*/
+#seccion1{
+    display: grid;
+    place-items: center;
+}
+
+/* Imagenes iniciales */
+#imgVSv2{
+    width: 50px;
+    height: 50px;
+}
+
+/* Imagen sobre nosotros */
+#imgSN{
+    width: 210px;
+    height: 180px;
+    margin: 15px;
+}
+
+/* Redes sociales del equipo (imagen) */
+#imgRed{
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    margin-bottom: 25px;
+}
+
+/* Imagenes del equipo */
+#imgPerfil{
+    border-radius: 100px;
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 0 5px #d71787;
+    outline: 0px;
+}
+
+/* Barra divisora */
+#barraDivisora{
+    width: 100%;
+    height: 30px;
+}
+
+/* Estilos de la capa oculta sobre imagen */
+.ourPIHover{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(var(--color2), 0.7);;
+    opacity: 0;
+    /* transition: .2s ease-in-out; */
+    transform: translateY(5%);
+    /* cursor: pointer; */
+    transition: transform .2s ease-in-out;
+}
+
+/* Cuando el puntero pasa sobre la imagen, cambia propiedades de la capa oculta */
+.ourPreImg:hover .ourPIHover{
+    opacity: 1;
+    transform: translate(0%);
+    position: absolute;
+    top: 0;
+}
+
+/* Estilos nombres en capa oculta de imagenes de perfil*/
+.titleUs {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    color:white;
+} 
+
+.ourPreImg {
+    transition: transform 0.3s, filter 0.3s;
+}
+
+/* Estilos para hacer que la imagen de perfil crezca */
+.ourPreImg:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-after);
+}
+
+

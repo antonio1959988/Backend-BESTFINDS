@@ -1,0 +1,236 @@
+
+
+/* Diseño base de etiqueta body*/
+body{
+    text-align: center;
+    font-family: "Roboto", sans-serif;;
+    color: #707070;
+}
+
+/* Titulos */
+h1{
+    text-align: left;
+    margin-top: 30px;
+}
+
+
+/* #containerpay */
+#pagos{
+    text-align:left;
+}
+
+#imgMasterCard img{
+    width: 40%;
+    @media (max-width: 576px) {
+        width: 25%;
+    }
+    /* display: inline; */
+}
+#imgMercadoPago img{
+    width: 80%;
+    @media (max-width: 576px) {
+        width: 50%;
+    }
+    /* display: inline; */
+}
+#imgPaypal img{
+    width: 80%;
+    @media (max-width: 576px) {
+        width: 50%;
+    }
+    /* display: inline; */
+}
+
+#resumenCompra{
+  height: auto;
+  width: auto;
+    /* border: 1px solid #707070; */
+    box-shadow: 0 0 5px #d71787;
+    align-items: center;
+    border-radius: 25px;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    @media (max-width: 992px) {
+        margin-left: 5%;
+        margin-right: 5%;
+        text-align: center;
+    }
+}
+
+#paymethods2{
+  height: auto;
+  width: auto;
+    border: 1px solid #707070;
+    /* box-shadow: 0 0 5px #d71787; */
+    align-items: center;
+    border-radius: 25px;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    @media (max-width: 992px) {
+        margin-left: 5%;
+        margin-right: 5%;
+        text-align: center;
+    }
+}
+#paymethods2:hover{
+  box-shadow: 0 0 5px #d71787;
+}
+
+
+/* Barra divisora */
+#barraDivisora{
+    width: 100%;
+    height: 30px;
+}
+
+/*Seleccionador de radio*/
+input[type="radio"]:checked{
+    border: 10px solid #d71787;
+    /* accent-color: #d71787; */
+    box-shadow: 0 0 5px #d71787;
+    background-color: #707070;
+}
+
+
+.form-control, .form-select, .form-check, .input-field{
+
+    &:focus {
+        /*Cuando se da click en los inputs, se crea un resplandor*/
+        color: #707070;
+        font-weight: bold;
+        border: none;
+        box-shadow: 0 0 5px #d71787;
+        outline: 0px;
+    }
+}
+
+.form-control:hover, .form-select:hover, .input-field:hover{
+  box-shadow: 0 0 5px #d71787;
+}
+
+/*color y tamaño de botones*/
+#btnProcederPago, #btnPagar {
+  background-color: #d71787; /* Cambia el color de fondo */
+  color: #fff; /* Cambia el color del texto a blanco */
+  border-color: #d71787;
+  border-radius: 40px;
+  margin-top: 5%;
+}
+#btnProcederPago:hover, #btnPagar:hover {
+  background-color: #ff8c66; /* Cambia el color de fondo al pasar el mouse por encima */
+}
+
+.cardSection{
+  display: none;
+}
+
+input .cardSection:checked{
+  .cardSection{
+    display:block;
+  }
+}
+
+/*Alertas*/
+.alert{
+  max-width: 100%;
+  display: none;
+}
+
+/*Alertas activadas*/
+.alert-activa{
+  
+  display: block;
+}
+/*Alertas activadas*/
+.alert-noactiva{
+  
+  display: none;
+}
+
+  #productPrice {
+    /* bottom:0px; */
+    /* position:absolute; */
+    /* right:0px; */
+    color:#d71787;
+  }
+
+  .line {
+    height:1px;
+    width:100%;
+    margin-top:5px;
+    margin-bottom:5px;
+    background:#ddd;
+  }
+
+  .full-width {
+    width:100%;
+  }
+
+  .dense {
+    /* line-height:1.2em; */
+    font-size:16px;
+    /* font-size:1rem; */
+  }
+
+  .credit-info {
+    /* background:#d71787; */
+    height:100%;
+    width:100%;
+  }
+
+
+/* Modificacion de modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+}
+
+.modal-contenido {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+
+  /* Agregar animación de aparición con popup */
+  animation: popup 0.3s ease-in-out;
+}
+
+.cerrar {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+  color: black;
+  text-decoration: none;
+}
+
+/* Definir la animación "popup" */
+@keyframes popup {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
