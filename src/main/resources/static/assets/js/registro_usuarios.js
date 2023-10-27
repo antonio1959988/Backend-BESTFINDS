@@ -147,7 +147,7 @@ document.getElementById("btnRegistrar").addEventListener("click", function () {
 
 		// localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
-		fetch('http://localhost:8080/usuarios', {
+		fetch('https://bestfinds-ecommerce.onrender.com/usuarios', {
 			method: "POST",
 			headers: {
 				'Content-Type': 'application/json'

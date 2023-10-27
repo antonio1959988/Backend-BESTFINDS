@@ -85,7 +85,7 @@ document.getElementById("btnSesion").addEventListener("click", function () {
 		})
 		.catch(err => console.log(err));
 */
-	const url = `https://bestfinds-ecommerce.onrender.com//usuarios/byCorreo?correo=${correo}`;
+	const url = `https://bestfinds-ecommerce.onrender.com/usuarios/byCorreo?correo=${correo}`;
 	let userData;
 	fetch(url)
 		.then(response => response.json())
